@@ -28,3 +28,7 @@ alter table pracownicy_stanowiska add CONSTRAINT FOREIGN key
 fk_pracownicy_stanowiska_stanowisko_id(stanowisko_id)
 REFERENCES stanowiska(id)
 on UPDATE RESTRICT on delete RESTRICT;
+
+insert into pracownicy (imie, nazwisko) values ("jan","kowalski");
+insert into stanowiska (nazwa) values ("admin"), ("kierowca");
+insert into pracownicy_stanowiska (pracownik_id, stanowisko_id) values (1,1), (1,2);
