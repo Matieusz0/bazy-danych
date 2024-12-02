@@ -21,5 +21,10 @@ insert into dane (wyrob_id, ilosc_obecna, ilosc_poczatkowa, owner_id) VALUES
 
 -- zapytania
 
+-- select COMMIT(*) from dane
+-- select DISTINCT (owner_id) from dane;
+-- select COUNT distinct(owner_id) from dane;
+-- select count (DISTINCT(wyrob_id)) from dane;
 
+select (select count(wyrob_id) from dane) = (select count(DISTINCT(wyrob_id)) from dane where owner_id is null);
 
