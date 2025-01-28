@@ -1,4 +1,5 @@
-create data if not EXISTS zadanie2 DEFAULT CHARACTER set utf8mb4 COLLATE uft8mb4_unicode_ci;
+drop database if EXISTS zadanie2;
+create database if not EXISTS zadanie2 DEFAULT CHARACTER set utf8mb4 COLLATE utf8mb4_unicode_ci;
 use zadanie2;
 
 create table samochod
